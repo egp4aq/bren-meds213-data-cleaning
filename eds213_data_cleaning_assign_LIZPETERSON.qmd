@@ -1,0 +1,110 @@
+---
+title: "eds213_data_cleaning_assign_LIZPETERSON"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+# Read in libraries
+library(here)
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+# Read in the data
+snow_survey <- read_csv(here('data','processed','snow_cover.csv'))
+
+# Take a look at the data
+glimpse(snow_survey)
+```
+
+We see from this glimpse that Water_cover, Land_cover, and Total_cover are of type character when they should be numeric 
+
+1. Clean the `Water_cover` column to transform it into the correct data type and respect expectations for a percentage
+
+Start by identifying which rows in the Water_cover column are not numeric
+
+```{r}
+snow_survey %>% 
+  mutate(numeric_check = as.numeric(Water_cover)) %>% 
+  filter(is.na(numeric_check)) %>% 
+  count(Water_cover)
+```
+
+Once we count up the non-numeric values in the Water_cover, we see that in addition to 149 NA's, there are 10 values marked `-`, 575 `.`, 32 `n/a`, and 1 `unk`. We'll make all of those values NA's. 
+
+```{r}
+snow_survey <- snow_survey %>%
+  mutate(Water_cover = ifelse(Water_cover %in% c("-", ".", "n/a", "unk"), NA, Water_cover))
+```
+
+Now we can convert the column type to numeric and make sure the values are within the bounds we want (0-100). If the values are not within 0-100 we will make them NAs. And we'll confirm everything worked.
+```{r}
+snow_survey <- snow_survey %>%
+  mutate(Water_cover = as.numeric(Water_cover)) %>% 
+  mutate(Water_cover = ifelse(Water_cover < 0 | Water_cover > 100, NA, Water_cover))
+
+typeof(snow_survey$Water_cover)
+```
+
+
+2. Clean the `Land_cover` column to transform it into the correct data type and respect expectations for a percentage
+Start by identifying which rows in the Land_cover column are not numeric
+```{r}
+snow_survey %>% 
+  mutate(numeric_check = as.numeric(Land_cover)) %>% 
+  filter(is.na(numeric_check)) %>% 
+  count(Land_cover)
+```
+
+Once we count up the non-numeric values in the Land_cover, we see that in addition to 1 NA, there are 14 values marked down `.`. We'll convert this to an NA. 
+
+```{r}
+snow_survey <- snow_survey %>%
+  mutate(Land_cover = ifelse(Land_cover == ".", NA, Land_cover))
+```
+
+Now we can convert the column type to numeric and make sure the values are within the bounds we want (0-100). If the values are not within 0-100 we will make them NAs. And we'll confirm everything worked.
+```{r}
+snow_survey <- snow_survey %>%
+  mutate(Land_cover = as.numeric(Land_cover)) %>% 
+  mutate(Land_cover = ifelse(Land_cover < 0 | Water_cover > 100, NA, Land_cover))
+
+typeof(snow_survey$Land_cover)
+```
+
+3. Use the relationship between the three cover columns (Snow, Water, Land) to infer missing values where possible and recompute the `Total_cover` column as needed
+
+First, I want to check for where the Total_cover column does not equal the sum of the cover columns.
+```{r}
+wrong_total <- snow_survey %>% 
+  filter(Total_cover != Snow_cover + Water_cover + Land_cover)
+```
+
+From filtering in this way, we see that 184 observations do not compute correctly. From looking at the `wrong_total` data frame, it seems that for a lot of the rows, the Water and Land cover columns are 0, but Snow cover is not 0, but the Total_cover column for some reason is still 0. I am going to coerce those values so that if Water and Land cover values are 0, the Total_cover = Snow_cover.
+
+```{r}
+snow_survey <- snow_survey %>%
+  mutate(Total_cover = ifelse(Water_cover == 0 & Land_cover == 0 & !is.na(Snow_cover), Snow_cover, Total_cover))
+```
+
+Now that we fixed those values, I am going to recompute the rest of the mistakes so that Total_cover is equal to the tree cover columns. 
+```{r}
+# Recompute the Total_cover column to add up the values in Snow, Water, and Land columns. 
+snow_survey <- snow_survey %>% 
+  mutate(Total_cover = Snow_cover + Water_cover + Land_cover) %>% 
+  as.numeric(Total_cover)
+```
+
+Now the csv is all clean and ready to be exported. We can take one more look at it before we export it. 
+
+```{r}
+glimpse(snow_survey)
+```
+
+```{r}
+write.csv(snow_survey, "data/processed/all_cover_fixed_LIZPETERSON.csv", row.names = FALSE)
+```
+
