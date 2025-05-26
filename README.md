@@ -61,16 +61,15 @@ data
 - ASDN_Lemming_counts.csv
 - ASDN_Bird_resights.csv
 
-5. Are there multiple versions of the dataset? 
 The version of the dataset that we use was created for the EDS 213 course at the Bren School of Environmental Science and Management. This is not the original dataset from ARCTIC SHOREBIRD DEMOGRAPHICS NETWORK [https://doi.org/10.18739/A2222R68W](https://doi.org/10.18739/A2222R68W).
 
 ## DATA-SPECIFIC INFORMATION FOR:
 
 For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` : 
 
-1. Number of variables: 11
+Number of variables: 11
 
-2. Number of cases/rows: 42,830
+Number of cases/rows: 42,830
 
 
 | Variable name | Description                                                                                                                                                           | Unit(s) / Value type |
@@ -87,9 +86,9 @@ For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` :
 | Observer      | Person who conducted the survey                                                                                                                                       | string               |
 | Notes         | Any relevant comments on the survey                                                                                                                                   | string               |
 
-5. Missing data codes: NA
+Missing data codes: NA
 
-6. Specialized formats or other abbreviations used: NA
+Specialized formats or other abbreviations used: NA
 
 
 ## SHARING/ACCESS INFORMATION
