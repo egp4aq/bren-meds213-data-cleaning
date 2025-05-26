@@ -89,7 +89,7 @@ For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` :
 
 5. Missing data codes: NA
 
-6. Specialized formats or other abbreviations used:
+6. Specialized formats or other abbreviations used: NA
 
 
 ## SHARING/ACCESS INFORMATION
@@ -110,9 +110,8 @@ Links/relationships to ancillary data sets: NA
 
 The original `ASDN_Snow_Survey.csv` can be found in the [bred-meds213-data-cleaning repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning/tree/main/data/raw), a repository for the EDS 213 course at the Bren School of Environmental Science and Management. This is a subset of the dataset hosted by the [NSF Arctic Data Center](https://arcticdata.io).
 
-8. Recommended citation for the project:
-   
 The ASDN metadata encourages citing the project in this way: 
+
 Please acknowledge this dataset and the authors in any analysis, publication, presentation, or other output that uses these data. If you use the full dataset, we suggest you cite it as:
 
 Lanctot, RB, SC Brown, and BK Sandercock. 2016. Arctic Shorebird Demographics Network. NSF Arctic Data Center. doi: INSERT HERE.
