@@ -17,3 +17,46 @@ Data on climatic conditions, prey abundance, and predators were also collected. 
 
 See `01_ASDN_Readme.txt` provided in the [course data repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2024-class-data) for full metadata information about this data set.
 
+DATA & FILE OVERVIEW
+
+1. File List: <list all files (or folders, as appropriate for dataset 
+organization) contained in the dataset, with a brief description of their content>
+
+2. Relationship between files, if important:
+
+3. Additional related data collected that was not included in the current
+data package:
+
+4. Are there multiple versions of the dataset? 
+
+
+DATA-SPECIFIC INFORMATION FOR:
+
+For the file  data/processed/all_cover_fixed_YOURNAME.csv : 
+
+1. Number of variables:
+
+2. Number of cases/rows:
+
+3. Variable List: <list variable name(s), description(s), unit(s)and value 
+labels as appropriate for each>
+
+4. Missing data codes: <list code/symbol and definition>
+
+5. Specialized formats or other abbreviations used:
+
+SHARING/ACCESS INFORMATION
+
+1. Licenses/restrictions placed on the data:
+
+2. Links to publications that cite or use the data:
+
+3. Links to other publicly accessible locations of the data:
+
+4. Links/relationships to ancillary data sets: <any supplementary data sources 
+that support analysis or classification of the datasets, eg., plant taxonomy table.)>
+
+5. Was data derived from another source? If yes, list source(s): <list citations 
+to original sources>
+
+6. Recommended citation for the project:
