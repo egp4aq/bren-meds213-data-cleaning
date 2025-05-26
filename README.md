@@ -17,35 +17,81 @@ Data on climatic conditions, prey abundance, and predators were also collected. 
 
 See `01_ASDN_Readme.txt` provided in the [course data repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2024-class-data) for full metadata information about this data set.
 
-DATA & FILE OVERVIEW
+## DATA & FILE OVERVIEW
 
-1. File List: <list all files (or folders, as appropriate for dataset 
-organization) contained in the dataset, with a brief description of their content>
+The data folder, `data/`, contains two folders: raw/ and processed/. The structure of the data folder is as follows:
 
-2. Relationship between files, if important:
+```bash
+data
+├── processed
+│   ├── all_cover_fixed_LIZPETERSON.csv
+│   ├── snow_cover.csv
+│   └── species_presence.csv
+├── raw
+│   ├── 01_ASDN_Readme.txt
+│   ├── ASDN_Daily_species.csv
+└── └── ASDN_Snow_survey
+```
+`all_cover_fixed_LIZPETERSON.csv`: Cleaned snow survey data
+`snow_cover.csv`: Partially cleaned snow cover survey data (only the `snow_cover` column was cleaned
+`species_presence.csv`: Cleaned species data
+`01_ASDN_Readme.txt`: Original metadata from ASDN
+`ASDN_Daily_species.csv`: Species survey data from ASDN
+`ASDN_Snow_survey`: Snow cover survey data from ASDN
 
-3. Additional related data collected that was not included in the current
-data package:
+#### Additional related data collected that was not included in the current data package:
+- ASDN_Invert_biomass.csv
+- ASDN_Bird_sexes.csv
+- ASDN_Weather_Hobo.csv
+- ASDN_Bird_nests.csv
+- ASDN_Pred_nests.csv
+- ASDN_Camp_staff.csv
+- ASDN_Weather_snow_manual.csv
+- ASDN_Weather_precip_manual.csv
+- ASDN_Pred_point_counts.csv
+- ASDN_Daily_species_effort.csv
+- ASDN_Lemming_trap.csv
+- ASDN_Camp_info.csv
+- ASDN_Lemming_nests.csv
+- ASDN_Daily_pred_lemm.csv
+- ASDN_Bird_captures.csv
+- ASDN_Surface_water.csv
+- ASDN_Geodata.csv
+- ASDN_Bird_eggs.csv
+- ASDN_Lemming_counts.csv
+- ASDN_Bird_resights.csv
 
-4. Are there multiple versions of the dataset? 
+5. Are there multiple versions of the dataset? 
+The version of the dataset that we use was created for the EDS 213 course at the Bren School of Environmental Science and Management. This is not the original dataset from ARCTIC SHOREBIRD DEMOGRAPHICS NETWORK [https://doi.org/10.18739/A2222R68W](https://doi.org/10.18739/A2222R68W).
+
+## DATA-SPECIFIC INFORMATION FOR:
+
+For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` : 
+
+1. Number of variables: 11
+
+2. Number of cases/rows: 42,830
 
 
-DATA-SPECIFIC INFORMATION FOR:
+| Variable name | Description                                                                                                                                                           | Unit(s) / Value type |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| Site          | Four-letter code of site at which data were collected                                                                                                                 | string               |
+| Year          | Year in which data were collected                                                                                                                                     | integer              |
+| Date          | Date on which data were collected                                                                                                                                     | date                 |
+| Plot          | Name of study plot on which survey was conducted                                                                                                                      | string               |
+| Location      | Name of dedicated snow-survey location, if applicable                                                                                                                 | string               |
+| Snow_cover    | Percent cover of snow, including slush                                                                                                                                | integer              |
+| Water_cover   | Percent cover of water                                                                                                                                                | integer              |
+| Land_cover    | Percent cover of exposed land                                                                                                                                         | integer              |
+| Total_cover   | Sum of previous three _cover variables. Values either 100 or NA.  If NA, _cover variables do not add to 100, suggesting instances of incomplete land cover surveying. | integer              |
+| Observer      | Person who conducted the survey                                                                                                                                       | string               |
+| Notes         | Any relevant comments on the survey                                                                                                                                   | string               |
 
-For the file  data/processed/all_cover_fixed_YOURNAME.csv : 
+5. Missing data codes: <list code/symbol and definition>
 
-1. Number of variables:
+6. Specialized formats or other abbreviations used:
 
-2. Number of cases/rows:
-
-3. Variable List: <list variable name(s), description(s), unit(s)and value 
-labels as appropriate for each>
-
-4. Missing data codes: <list code/symbol and definition>
-
-5. Specialized formats or other abbreviations used:
-
-SHARING/ACCESS INFORMATION
+## SHARING/ACCESS INFORMATION
 
 1. Licenses/restrictions placed on the data:
 
