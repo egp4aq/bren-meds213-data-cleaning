@@ -94,20 +94,25 @@ For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` :
 
 ## SHARING/ACCESS INFORMATION
 
-1. Licenses/restrictions placed on the data:
+This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
 
-2. Links to publications that cite or use the data:
+Here are two examples of publications that cite the dataset: 
 
-3. Links to other publicly accessible locations of the data:
+https://onlinelibrary.wiley.com/doi/10.1111/gcb.17356
+https://link.springer.com/article/10.1007/s10646-023-02708-w
 
-4. Links/relationships to ancillary data sets: <any supplementary data sources 
-that support analysis or classification of the datasets, eg., plant taxonomy table.)>
+To see the rest of the citations, you can see them listed here: 
+https://arcticdata.io/catalog/view/doi:10.18739/A2222R68W
 
-5. Was data derived from another source? If yes, list source(s): <list citations 
-to original sources>
+Data set hosted by the [NSF Arctic Data Center](https://arcticdata.io) data repository 
 
-6. Recommended citation for the project:
-The ASDN metadata 
+Links/relationships to ancillary data sets: NA
+
+The original `ASDN_Snow_Survey.csv` can be found in the [bred-meds213-data-cleaning repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning/tree/main/data/raw), a repository for the EDS 213 course at the Bren School of Environmental Science and Management. This is a subset of the dataset hosted by the [NSF Arctic Data Center](https://arcticdata.io).
+
+8. Recommended citation for the project:
+   
+The ASDN metadata encourages citing the project in this way: 
 Please acknowledge this dataset and the authors in any analysis, publication, presentation, or other output that uses these data. If you use the full dataset, we suggest you cite it as:
 
 Lanctot, RB, SC Brown, and BK Sandercock. 2016. Arctic Shorebird Demographics Network. NSF Arctic Data Center. doi: INSERT HERE.
