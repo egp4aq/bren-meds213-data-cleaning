@@ -74,7 +74,7 @@ For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` :
 
 
 | Variable name | Description                                                                                                                                                           | Unit(s) / Value type |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+|---------------|------------------------------------------------------------|----------------------|
 | Site          | Four-letter code of site at which data were collected                                                                                                                 | string               |
 | Year          | Year in which data were collected                                                                                                                                     | integer              |
 | Date          | Date on which data were collected                                                                                                                                     | date                 |
@@ -83,13 +83,14 @@ For the file `data/processed/all_cover_fixed_LIZPETERSON.csv` :
 | Snow_cover    | Percent cover of snow, including slush                                                                                                                                | integer              |
 | Water_cover   | Percent cover of water                                                                                                                                                | integer              |
 | Land_cover    | Percent cover of exposed land                                                                                                                                         | integer              |
-| Total_cover   | Sum of previous three _cover variables. Values either 100 or NA.  If NA, _cover variables do not add to 100, suggesting instances of incomplete land cover surveying. | integer              |
+| Total_cover   | Sum of the three cover columns - they should sum to 100%. | integer              |
 | Observer      | Person who conducted the survey                                                                                                                                       | string               |
 | Notes         | Any relevant comments on the survey                                                                                                                                   | string               |
 
-5. Missing data codes: <list code/symbol and definition>
+5. Missing data codes: NA
 
 6. Specialized formats or other abbreviations used:
+
 
 ## SHARING/ACCESS INFORMATION
 
@@ -106,3 +107,13 @@ that support analysis or classification of the datasets, eg., plant taxonomy tab
 to original sources>
 
 6. Recommended citation for the project:
+The ASDN metadata 
+Please acknowledge this dataset and the authors in any analysis, publication, presentation, or other output that uses these data. If you use the full dataset, we suggest you cite it as:
+
+Lanctot, RB, SC Brown, and BK Sandercock. 2016. Arctic Shorebird Demographics Network. NSF Arctic Data Center. doi: INSERT HERE.
+
+If you use data from only one or a few sites, we suggest you cite data for each site as per this example, using the corresponding site PIs as the authors:
+
+Lanctot, RB and ST Saalfeld. 2016. Barrow, 2014. Arctic Shorebird Demographics Network. NSF Arctic Data Center. doi: INSERT HERE.
+
+Note that each updated version of the full dataset has its own unique DOI.
