@@ -32,12 +32,12 @@ data
 │   ├── ASDN_Daily_species.csv
 └── └── ASDN_Snow_survey
 ```
-`all_cover_fixed_LIZPETERSON.csv`: Cleaned snow survey data
-`snow_cover.csv`: Partially cleaned snow cover survey data (only the `snow_cover` column was cleaned
-`species_presence.csv`: Cleaned species data
-`01_ASDN_Readme.txt`: Original metadata from ASDN
-`ASDN_Daily_species.csv`: Species survey data from ASDN
-`ASDN_Snow_survey`: Snow cover survey data from ASDN
+- `all_cover_fixed_LIZPETERSON.csv`: Cleaned snow survey data
+- `snow_cover.csv`: Partially cleaned snow cover survey data (only the `snow_cover` column was cleaned)
+- `species_presence.csv`: Cleaned species data
+- `01_ASDN_Readme.txt`: Original metadata from ASDN
+- `ASDN_Daily_species.csv`: Species survey data from ASDN
+- `ASDN_Snow_survey`: Snow cover survey data from ASDN
 
 #### Additional related data collected that was not included in the current data package:
 - ASDN_Invert_biomass.csv
