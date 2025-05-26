@@ -61,7 +61,7 @@ data
 - ASDN_Lemming_counts.csv
 - ASDN_Bird_resights.csv
 
-The version of the dataset that we use was created for the EDS 213 course at the Bren School of Environmental Science and Management. This is not the original dataset from[ARCTIC SHOREBIRD DEMOGRAPHICS NETWORK](https://doi.org/10.18739/A2222R68W).
+The version of the dataset that we use was created for the EDS 213 course at the Bren School of Environmental Science and Management. This is not the original dataset from the [ARCTIC SHOREBIRD DEMOGRAPHICS NETWORK](https://doi.org/10.18739/A2222R68W).
 
 ## DATA-SPECIFIC INFORMATION FOR:
 
